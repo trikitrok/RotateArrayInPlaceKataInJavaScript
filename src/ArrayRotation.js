@@ -5,7 +5,7 @@ var ArrayRotation = {
     var i, step,
       size = array.length;
 
-    if (steps === 0 || size === 0) {
+    if (size === 0) {
       return array;
     }
 
