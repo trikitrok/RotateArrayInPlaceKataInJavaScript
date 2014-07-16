@@ -2,15 +2,17 @@
 
 var ArrayRotation = {
   rotateInPlace: function(array, steps) {
-    var i,
+    var i, step,
       size = array.length;
 
     if (steps === 0 || size === 0) {
       return array;
     }
 
-    for (i = 1; i < size; i++) {
-      swap(0, i);
+    for (step = 0; step < steps; step++) {
+      for (i = 1; i < size; i++) {
+        swap(0, i);
+      }
     }
 
     return array;
