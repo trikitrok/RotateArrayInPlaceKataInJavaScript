@@ -2,25 +2,15 @@
 
 var ArrayRotation = {
   rotateInPlace: function(array, steps) {
-    var temp;
+    var i,
+      size = array.length;
 
-    if (steps === 0 || array.length === 0) {
+    if (steps === 0 || size === 0) {
       return array;
     }
 
-    if (array.length === 2) {
-      swap(0, 1);
-    }
-
-    if (array.length === 3) {
-      swap(0, 1); 
-      swap(0, 2);  
-    }
-
-    if (array.length === 4) {
-      swap(0, 1); 
-      swap(0, 2);  
-      swap(0, 3);  
+    for (i = 1; i < size; i++) {
+      swap(0, i);
     }
 
     return array;
@@ -30,7 +20,7 @@ var ArrayRotation = {
       array[position1] = array[position2];
       array[position2] = temp;
     }
-  } 
+  }
 };
 
 module.exports.ArrayRotation = ArrayRotation
