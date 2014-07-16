@@ -9,7 +9,7 @@ var ArrayRotation = {
       return;
     }
 
-    for (step = 0; step < steps; step++) {
+    for (step = 0; step < steps % size; step++) {
       for (i = 1; i < size; i++) {
         this.swap(array, 0, i);
       }
