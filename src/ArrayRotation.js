@@ -6,7 +6,7 @@ var ArrayRotation = {
       size = array.length;
 
     if (size === 0) {
-      return array;
+      return;
     }
 
     for (step = 0; step < steps; step++) {
@@ -14,8 +14,6 @@ var ArrayRotation = {
         swap(0, i);
       }
     }
-
-    return array;
 
     function swap(position1, position2) {
       var temp = array[position1];
