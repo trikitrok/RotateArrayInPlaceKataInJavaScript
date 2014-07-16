@@ -4,9 +4,12 @@ var ArrayRotation = require("../src/ArrayRotation.js").ArrayRotation;
 
 describe("Array rotation in place", function() {
   it("An empty array does not change", function() {
-    var array = [];
+    var originalArray = [],
+      resultingArray = ArrayRotation.rotateInPlace(
+        originalArray, 3
+      );
 
-    expect(ArrayRotation.rotateInPlace(array, 3))
-      .toBe(array);
+    expect(resultingArray).toBe(originalArray);
+    expect(resultingArray).toEqual([]);
   });
 });
