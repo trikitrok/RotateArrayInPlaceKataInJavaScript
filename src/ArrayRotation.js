@@ -11,15 +11,15 @@ var ArrayRotation = {
 
     for (step = 0; step < steps % size; step++) {
       for (i = 1; i < size; i++) {
-        this.swap(array, 0, i);
+        swap(0, i);
       }
     }
-  }, 
 
-  swap: function(array, position1, position2) {
-    var temp = array[position1];
-    array[position1] = array[position2];
-    array[position2] = temp;
+    function swap(position1, position2) {
+      var temp = array[position1];
+      array[position1] = array[position2];
+      array[position2] = temp;
+    }
   }
 };
 
