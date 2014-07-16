@@ -1,0 +1,1 @@
+[Rotate array in place kata](http://craftsmanship.sv.cmu.edu/katas/rotate-an-array-in-place) in JavaScript.
