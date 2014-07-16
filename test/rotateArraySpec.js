@@ -33,5 +33,15 @@ describe("Array rotation in place", function() {
     expect(resultingArray).toEqual([2, 1]);
   });
 
+  it("A rotation by 1 step changes an array of size 3", function() {
+    var originalArray = [1, 2, 3],
+      resultingArray = ArrayRotation.rotateInPlace(
+        originalArray, 1
+      );
+
+    expect(resultingArray).toBe(originalArray);
+    expect(resultingArray).toEqual([3, 1, 2]);
+  });
+
 
 });
