@@ -23,26 +23,13 @@ describe("Array rotation in place", function() {
     expect(originalArray).toEqual([1, 2]);
   });
 
-  it("A rotation by a number of steps that is less than the array size", function() {
+  it("A rotation by non-zero steps on a non-empty array", function() {
     var originalArray = [1, 2, 3, 4];
-
-    ArrayRotation.rotateInPlace(
-      originalArray, 2
-    );
-
-    expect(originalArray).toEqual([3, 4, 1, 2]);
-  });
-
-  it("A rotation by a number of steps that is greater or equal than the array size", function() {
-    var originalArray = [1, 2, 3, 4];
-
-    //spyOn(ArrayRotation, 'swap').andCallThrough();
 
     ArrayRotation.rotateInPlace(
       originalArray, 6
     );
 
     expect(originalArray).toEqual([3, 4, 1, 2]);
-    // expect(ArrayRotation.swap.callCount).toBe(6);
   });
 });
