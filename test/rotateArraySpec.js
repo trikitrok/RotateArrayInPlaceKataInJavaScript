@@ -3,7 +3,7 @@
 var ArrayRotation = require("../src/ArrayRotation.js").ArrayRotation;
 
 describe("Array rotation in place", function() {
-  it("An empty array does not change", function() {
+  it("A rotation by any number of steps on an empty array has no effect", function() {
     var originalArray = [];
 
     ArrayRotation.rotateInPlace(
@@ -13,7 +13,7 @@ describe("Array rotation in place", function() {
     expect(originalArray).toEqual([]);
   });
 
-  it("A rotation by 0 steps does not change the array", function() {
+  it("A rotation by 0 steps on a non-empty array has no effect", function() {
     var originalArray = [1, 2];
 
     ArrayRotation.rotateInPlace(
@@ -23,7 +23,7 @@ describe("Array rotation in place", function() {
     expect(originalArray).toEqual([1, 2]);
   });
 
-  it("A rotation by non-zero steps on a non-empty array", function() {
+  it("A rotation by non-zero steps on a non-empty array works as expected", function() {
     var originalArray = [1, 2, 3, 4];
 
     ArrayRotation.rotateInPlace(
