@@ -17,6 +17,12 @@ var ArrayRotation = {
       swap(0, 2);  
     }
 
+    if (array.length === 4) {
+      swap(0, 1); 
+      swap(0, 2);  
+      swap(0, 3);  
+    }
+
     return array;
 
     function swap(position1, position2) {
