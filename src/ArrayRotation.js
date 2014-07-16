@@ -9,24 +9,22 @@ var ArrayRotation = {
     }
 
     if (array.length === 2) {
-      temp = array[1];
-      array[1] = array[0];
-      array[0] = temp;
+      swap(0, 1);
     }
 
     if (array.length === 3) {
-      temp = array[1];
-      array[1] = array[0];
-      array[0] = temp;  // 2 1 3
-
-      temp = array[2];
-      array[2] = array[0];
-      array[0] = temp;  // 2 1 3
+      swap(0, 1); 
+      swap(0, 2);  
     }
 
-
     return array;
-  }
+
+    function swap(position1, position2) {
+      var temp = array[position1];
+      array[position1] = array[position2];
+      array[position2] = temp;
+    }
+  } 
 };
 
 module.exports.ArrayRotation = ArrayRotation
